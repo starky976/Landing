@@ -1,0 +1,6 @@
+.c-inner {
+  @include mq(pc){
+    width: calc(82.29% -60px);
+    margin: auto;
+  }
+}

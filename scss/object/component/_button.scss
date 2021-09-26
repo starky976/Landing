@@ -1,0 +1,15 @@
+.c-button {
+  &--submit {
+    width: 225px;
+    padding: 15px ;
+    background: #867A62;
+    color: #ffffff;
+    margin: 40px auto auto;
+    display: block;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    font-size: 2.0rem;
+  }
+}

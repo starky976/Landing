@@ -1,0 +1,22 @@
+.c-section-ttlset {
+  margin-bottom: 30px;
+  font-size: 3.0rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  @include oswald;
+  @include mq(tab){}
+  @include mq(pc){
+    font-size: 6.5rem;
+  }
+  span {
+    margin-left: 2.3rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    font-family: 'Noto Sans JP';
+    @include mq(tab) {}
+    @include mq(pc) {
+
+    }
+  }
+}

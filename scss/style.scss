@@ -1,0 +1,21 @@
+/*
+FLOCSS3章
+*/
+@import "./foundation/base";
+
+//layout
+@import "./layout/header";
+@import "./layout/footer";
+//component
+@import "./object/component/section-ttlset";
+@import "./object/component/card";
+@import "./object/component/inner";
+@import "./object/component/button";
+//project
+@import "./object/project/gnavi";
+@import "./object/project/humburger";
+@import "./object/project/mainvisual";
+@import "./object/project/section";
+@import "./object/project/contact";
+//utillity
+@import "./object/utillity/margin"

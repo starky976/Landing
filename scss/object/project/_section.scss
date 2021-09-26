@@ -1,0 +1,238 @@
+.p-section {
+  /*
+  section
+  */
+  padding: 0 30px 50px;
+  @include mq(tab){
+    //
+  }
+  @include mq(pc){
+    padding: 0 60px 120px;
+  }
+  &__header {
+    margin-bottom: 30px;
+    @include mq(tab){
+
+    }
+    @include mq(pc){
+
+    }
+    img {
+      margin-bottom: 30px;
+      @include mq(tab){}
+      @include mq(pc){}
+    }
+    dl {
+      @include mq(tab){}
+      @include mq(pc){}
+      dt{
+        margin-bottom: 20px;
+        font-size: 2.4rem;
+        line-height: 1;
+        @include mq(tab){}
+        @include mq(pc){}
+      }
+      dd{
+        font-size: 1.6rem;
+        line-height: 1.875;
+        @include mq(tab){}
+        @include mq(pc){}
+      }
+    }
+  }//..header
+  &__item {//item
+    list-style-type:none ;
+    @include mq(tab){
+      display: flex;
+      justify-content: space-between;
+    }
+  }//..item
+  &--work{
+    @extend .p-section;
+    @include mq(tab){
+      //@debug
+    }
+    @include mq(pc){
+    }  //
+      .p-section__header{
+        @include mq(tab){
+          margin-bottom: 180px;
+          position: relative;
+        }
+        @include mq(pc){
+          margin-bottom: 60px;
+        }
+
+        > img{
+          @include mq(tab){
+            width: 72.2%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+          }
+          @include mq(pc){
+            width: 50%;
+            right: -60px;
+          }
+        }
+        > dl {
+          @include mq(tab){
+            width: 40.8%;
+          }
+        }
+
+      }//.p-section__header
+      .p-section__item{
+        @include mq (tab){
+
+        }
+        @include mq( pc ){
+          min-width: 753px;
+          width: 55.625%;
+        }
+        .item {
+          background: #FFF9E8;
+          @include mq(tab){
+            width: calc( 33% - 15px);
+          }
+          @include mq(pc){
+          }
+        }
+      }
+
+  }//work
+  &--merit {
+    margin-bottom: 50px;
+    padding: 50px 30px;
+    background: #867A62;
+    @include mq(pc){
+      padding: 60px;
+    }
+    .c-inner {
+      padding: 60px;
+      color: #fff;
+      border: 1px solid ;
+    }
+    .c-inner-ttlset{
+      margin-bottom: 40px;
+      @include mq(tab){
+        margin: auto auto 50px;
+      }
+    }
+    .list {
+      margin: 0;
+      padding: 0 10px;
+      @include mq(pc){
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      li {
+        margin: 0 0 30px;
+        padding: 0 0 0 9px;
+        list-style-type: none;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        dt {//dt--def
+          &::before {
+            content: "";
+            margin-right: 13.3px;
+            display: inline-block;
+            background-size: cover;
+            background-repeat:no-repeat ;
+          }
+        }
+        &:nth-child(1){
+          dt{
+            &::before{
+              width: 14px;
+              height: 17.23px;
+              background-image:url(../img/merit/ico01.svg) ;
+            }
+          }
+        }//1
+        &:nth-child(2){
+          dt{
+            &::before{
+              width: 17px;
+              height: 17.23px;
+              margin-left: -3px;
+              background-image: url(../img/merit/ico02.svg);
+            }
+          }
+        }//2
+        &:nth-child(3){
+          dt{
+            &::before{
+              width: 15px;
+              height: 19.37px;
+              margin-left: -5px;
+              background-image: url( ../../../img/merit/ico01.svg );
+            }
+          }
+        }//3
+        &:nth-child(4){
+          dt{
+            &::before{
+              width: 16px;
+              height: 19.37px;
+              margin-left: -5px;
+              background-image: url( ../img/merit/ico04.svg );
+            }
+          }
+        }//4
+        dl{
+          dt{
+            margin-bottom:20px ;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+          }
+          dd{
+            margin-left: 27px;
+            font-size: 1.4rem;
+            line-height: 1.714;
+            white-space: normal;
+          }
+        }
+      }
+    }
+  }//merit
+  &--case {
+    @extend .p-section;
+    .p-section__item {
+      @include mq(tab){
+        flex-wrap: wrap;
+      }
+      @include mq(pc){
+        width: 100%;
+        margin: auto;
+      }
+      .item {
+        margin-bottom: 20px;
+        @include mq(tab){
+          width: calc(50% - 15px );
+          margin-bottom: 0;
+          margin-top: 30px;
+        }
+        &:nth-child(1),
+        &:nth-child(2){
+          @include mq(tab){
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }//case
+  &--contact {
+    margin-bottom: 50px;
+    padding: 50px 30px;
+    background: #FDF1D0;
+    @include mq(pc){
+      padding: 120px 60px 120px;
+    }
+  }
+}

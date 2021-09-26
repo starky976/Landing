@@ -1,0 +1,39 @@
+$breakpoints : (
+  "pc":"screen and (min-width:768px)",
+  "tab":"screen and (min-width:641px)",
+  "sp":"screen and (max-width:640px)"
+);
+//mixin--初期値sm
+@mixin mq($breakpoint:sp){
+  @media #{map-get($breakpoints, $breakpoint)}{
+    @content;
+  }
+}
+
+//font--oswald
+@mixin  oswald($weight: "400") {
+  font-family: 'Oswald', sans-serif;
+  font-weight: $weight;
+}
+
+//root
+:root{
+  font-size: 62.5%;
+}
+
+//
+html{
+  height: 100%;
+  scroll-behavior: smooth;
+}
+//css共通設定
+body{
+  min-width: 350px;
+  width: 100%;
+  font-family: 'Noto Sans JP',Arial;
+  //横スクロールバーを表示しない
+  overflow-x: hidden;
+  position: relative;
+  background: #FAE9BD;
+  color: #1D1D1D;
+}

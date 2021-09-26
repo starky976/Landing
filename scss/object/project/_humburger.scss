@@ -1,0 +1,64 @@
+$btnWidth:20px;
+$btnHeight:1px;
+
+.p-humburger {
+  width: 60px;
+  height: 60px;
+  background: #f6DDA2;
+  position: relative;
+  @include mq(pc) {
+    display: none;
+  }
+  &::before,&::after {
+    content: "";
+    width: $btnWidth;
+    height: $btnHeight;
+    //
+    background: #1D1D1D;
+    position: absolute;
+    left: calc( 50% - (#{$btnWidth} / 2));
+    display: block;
+    //アニメーションの設定
+    transition: transform 0.2s;
+  }
+  //上部
+  &::before {
+    top: 22px;
+  }
+  //下部　
+  &::after {
+    top: 38px;
+  }
+  > span {
+    width: $btnWidth;
+    height: $btnHeight;
+    font-size: 0;
+    background: linear-gradient( to right, #1D1D1D,#1D1D1D) repeat-x #1D1D1D;
+    background-size: auto $btnHeight;
+    position: absolute;
+    left: calc(50% - (#{$btnWidth} / 2));
+    top:30px;
+    transition: transform 0.2s;
+  }
+  &.is-open {
+    &::before,&::after {
+      width: 40px;
+      left: calc( 50% - ( 40px / 2 ) );
+    }
+    &::before {
+      transform: rotate( 30deg );
+      top: 28px;
+    }
+    &::after {
+      transform: rotate( -30deg);
+      top: 28px;
+    }
+    > span {
+      background: none;
+    }
+  }
+}
+body.is-open {
+  position: fixed;
+}
+

@@ -1,0 +1,58 @@
+.p-contact {
+  > p {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    line-height: 1.875;
+  }
+  form {
+    width: 100%;
+    table {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    tr {
+      width: 100%;
+    }
+    td {
+      padding: 2px 2px 30px;
+      vertical-align: top;
+      box-sizing: border-box;
+      &:nth-child(1){//右
+        width: 80px;
+      }
+      &:nth-child(2){//左--残りいくら分使うか
+        width: 100%;
+      }
+      &:last-child {
+        padding-bottom:0 ;
+      }
+      label {
+        margin-top: -2px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        display: block;
+        @include oswald;
+        span {
+          font-size: 1.2rem;
+        }
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.4rem;
+        display: block;
+        box-sizing: border-box;
+      }
+      input {
+        height: 45px;
+      }
+      textarea {
+        height: 120px;
+      }
+    }
+    .c-buttun--submit {
+      margin: auto;
+    }
+  }
+}
