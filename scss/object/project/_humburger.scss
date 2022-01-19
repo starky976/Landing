@@ -6,6 +6,7 @@ $btnHeight:1px;
   height: 60px;
   background: #f6DDA2;
   position: relative;
+  border: hidden;
   @include mq(pc) {
     display: none;
   }
@@ -18,14 +19,11 @@ $btnHeight:1px;
     position: absolute;
     left: calc( 50% - (#{$btnWidth} / 2));
     display: block;
-    //アニメーションの設定
     transition: transform 0.2s;
   }
-  //上部
   &::before {
     top: 22px;
   }
-  //下部　
   &::after {
     top: 38px;
   }
