@@ -3,27 +3,17 @@
     transition: all 300ms 0s ease;
     width: 100vw;
     height: 100vh;
-    //中身の空白
     padding: 70px auto;
-    //背景色
-    //透過が必要な時
     background-color: rgba(217,199,151,.95);
     display: flex;
     transition: all 300ms 0s ease;
-    //flex-item(横配置)
     justify-content: center;
-    //item中央(上下)
     align-items: center;
     position: absolute;
-    //header分ずらしている
-    //top: 60px;
     top: 50px;
     left: 100%;
-    //↓現在表示しているブラウザの１から100すぐ下はキレてる
-    //重ねられた場合の表示順（降順）
     z-index: 100;
     @include oswald;
-    //flex-itemありき(listの表示順)
     flex-direction: column;
     overflow-y: auto;
     @include mq(pc){
@@ -79,7 +69,6 @@
       position: fixed;
       left: 0;
       @include mq( pc ){
-        //初期化
         position: static;
       }
     }
