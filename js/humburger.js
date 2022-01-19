@@ -22,4 +22,10 @@ $(function () {
       }
     }, 200);
   });
+  //リンククリック時にis-openクラスの削除
+  $(".p-gnavi a").click(function () {
+    $(".js-humburger--bt").removeClass("is-open");
+    $(".js-humburger").removeClass("is-open");
+    $("body").removeClass("is-open");
+  });
 });
